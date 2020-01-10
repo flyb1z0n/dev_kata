@@ -1,5 +1,6 @@
-var fs = require('fs');
-eval(fs.readFileSync('./common/base.js')+'');
+const fs = require('fs');
+const path = require("path");
+eval(fs.readFileSync(path.resolve(__dirname, "./common/base.js"))+'');
 /*
 
  Написать функцию вывода среднего числа из 3х
