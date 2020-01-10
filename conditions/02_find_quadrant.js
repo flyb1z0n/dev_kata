@@ -1,6 +1,6 @@
-var fs = require('fs');
-eval(fs.readFileSync('./common/base.js')+'');
-
+const fs = require('fs');
+const path = require("path");
+eval(fs.readFileSync(path.resolve(__dirname, "./common/base.js"))+'');
 
 
 /*
@@ -35,7 +35,7 @@ function test() {
 
     verify(findQuadrant, [13, 127], 'I');
     verify(findQuadrant, [-7, 15], 'II');
-    verify(findQuadrant, [-72, -44], 'II');
+    verify(findQuadrant, [-72, -44], 'III');
     verify(findQuadrant, [12, -2], 'IV');
     printResult()
 }
